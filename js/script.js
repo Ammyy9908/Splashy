@@ -10,6 +10,78 @@ if(localStorage.getItem('news_source')==null)
 
 //The default news source end here
   
+/*Function to change Random Background Image*/
+  /* This function takes weather description*/
+  function getNewBackground(status) {
+
+     //click event ends here
+
+    //change backgroundImage start from here
+
+    $('.main').css('background-image', 'url(https://source.unsplash.com/1920x1366/?' + status + ')');
+    //backgroundImage ends from here
+    $('#user').html(" Github");
+
+
+    Mousetrap.bind('ctrl+b', function (e) {
+      window.top.location.reload(true);
+    });
+  }
+	
+	
+	//Change Background
+        switch (localStorage.getItem('background')) {
+          case '1':
+            getNewBackground(desc);
+           
+            $('.backgrounds option[value=1]').attr('selected', 'selected');
+            break;
+          case '2':
+            getNewBackground('Dark');
+            $('.backgrounds option[value=2]').attr('selected', 'selected');
+            break;
+          case '3':
+            getNewBackground(myList[randomNo]);
+            $('.backgrounds option[value=3]').attr('selected', 'selected');
+            break;
+          case '4':
+            getNewBackground('Girls');
+            
+            $('.backgrounds option[value=4]').attr('selected', 'selected');
+            break;
+          case '5':
+            getNewBackground('Boys');
+            $('.backgrounds option[value=5]').attr('selected', 'selected');
+            break;
+          case '6':
+            getNewBackground('Animals');
+            $('.backgrounds option[value=6]').attr('selected', 'selected');
+            break;
+
+          case '7':
+            getNewBackground('Mounatins');
+            $('.backgrounds option[value=7]').attr('selected', 'selected');
+            break;
+          case '8':
+            getNewBackground('Beach');
+            $('.backgrounds option[value=8]').attr('selected', 'selected');
+            break;
+          case '9':
+            getNewBackground('Rainy');
+            $('.backgrounds option[value=9]').attr('selected', 'selected');
+            break;
+
+            case '10':
+            getNewBackground('rose');
+            $('.backgrounds option[value=10]').attr('selected', 'selected');
+            break;
+          default:
+            getNewBackground(desc);
+            $('.backgrounds option[value=1]').attr('selected', 'selected');
+            break;
+
+
+        }
 
 
 
@@ -154,24 +226,7 @@ if(localStorage.getItem('news_source')==null)
 
 
 
-  /*Function to change Random Background Image*/
-  /* This function takes weather description*/
-  function getNewBackground(status) {
-
-     //click event ends here
-
-    //change backgroundImage start from here
-
-    $('.main').css('background-image', 'url(https://source.unsplash.com/1920x1366/?' + status + ')');
-    //backgroundImage ends from here
-    $('#user').html(" Github");
-
-
-    Mousetrap.bind('ctrl+b', function (e) {
-      window.top.location.reload(true);
-    });
-  }
-
+  
 
 
  
@@ -496,59 +551,7 @@ x.play();
 
 
 
-        //Change Background
-        switch (localStorage.getItem('background')) {
-          case '1':
-            getNewBackground(desc);
-           
-            $('.backgrounds option[value=1]').attr('selected', 'selected');
-            break;
-          case '2':
-            getNewBackground('Dark');
-            $('.backgrounds option[value=2]').attr('selected', 'selected');
-            break;
-          case '3':
-            getNewBackground(myList[randomNo]);
-            $('.backgrounds option[value=3]').attr('selected', 'selected');
-            break;
-          case '4':
-            getNewBackground('Girls');
-            
-            $('.backgrounds option[value=4]').attr('selected', 'selected');
-            break;
-          case '5':
-            getNewBackground('Boys');
-            $('.backgrounds option[value=5]').attr('selected', 'selected');
-            break;
-          case '6':
-            getNewBackground('Animals');
-            $('.backgrounds option[value=6]').attr('selected', 'selected');
-            break;
-
-          case '7':
-            getNewBackground('Mounatins');
-            $('.backgrounds option[value=7]').attr('selected', 'selected');
-            break;
-          case '8':
-            getNewBackground('Beach');
-            $('.backgrounds option[value=8]').attr('selected', 'selected');
-            break;
-          case '9':
-            getNewBackground('Rainy');
-            $('.backgrounds option[value=9]').attr('selected', 'selected');
-            break;
-
-            case '10':
-            getNewBackground('rose');
-            $('.backgrounds option[value=10]').attr('selected', 'selected');
-            break;
-          default:
-            getNewBackground(desc);
-            $('.backgrounds option[value=1]').attr('selected', 'selected');
-            break;
-
-
-        }
+        
 
         //**Update Ends Here */
 
