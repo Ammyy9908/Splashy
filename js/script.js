@@ -555,7 +555,9 @@ x.play();
       }, // fallback incase of api error
       error: function (e) {
         console.log(e)
-        var statuscode = e.status; //or whatever
+	var statuscode = e.status; //or whatever
+	$('#temp').html('Error'+statuscode);
+        
         if (statuscode == 400) {
           console.log('There is an error city not found!');
         }
