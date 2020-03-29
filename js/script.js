@@ -32,7 +32,7 @@ if(localStorage.getItem('news_source')==null)
 	//Change Background
         switch (localStorage.getItem('background')) {
           case '1':
-            getNewBackground(desc);
+            getNewBackground('cloudy');
            
             $('.backgrounds option[value=1]').attr('selected', 'selected');
             break;
