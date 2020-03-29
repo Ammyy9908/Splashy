@@ -87,6 +87,76 @@ if(localStorage.getItem('news_source')==null)
 
 
         }
+	
+	
+	/** statements for adding an keypress event based on selected search engine by user */
+        // start from here
+        var engine = localStorage.getItem('engine');
+
+        if (engine == null || engine == 'Google') {
+          $('#icons').attr('class', 'fab fa-google');
+          $('#key').keypress(function (event) {
+            var keycode = (event.keyCode ? event.keyCode : event.which);
+
+
+            if (keycode == '13') {
+
+              if ($('#key').val() == null || $('#key').val().length == 0) {
+                $('#key').attr('placeholder', 'key Required');
+              } else {
+                window.location = "https://www.google.com/search?q=" + $('#key').val();
+              }
+            }
+          });
+
+
+        } else if (engine == 'stack') {
+          $('#icons').attr('class', 'fab fa-stack-overflow');
+
+          $('#key').keypress(function (event) {
+            var keycode = (event.keyCode ? event.keyCode : event.which);
+            if (keycode == '13') {
+              if ($('#key').val() == null || $('#key').val().length == 0) {
+                $('#key').attr('placeholder', 'key Required');
+              } else {
+                window.location = "https://stackoverflow.com/search?q=" + $('#key').val();
+              }
+            }
+          });
+        } else {
+          $('#icons').attr('class', 'fab fa-youtube');
+
+          $('#key').keypress(function (event) {
+            var keycode = (event.keyCode ? event.keyCode : event.which);
+            var __id = "";
+            if (keycode == '13') {
+              if ($('#key').val() == null || $('#key').val().length == 0) {
+                $('#key').attr('placeholder', 'key Required');
+              } else {
+                if ($('#key').val().length == 43) {
+                  device = "desktop";
+                  __id = $('#key').val().substr($('#key').val().indexOf('v=') + 2, $('#key').val().length - 1);
+
+
+                } else if ($('#key').val().length == 41) {
+                  device = "web_mobile";
+                  __id = $('#key').val().substr($('#key').val().indexOf('v=') + 2, $('#key').val().length - 1);
+                } else if ($('#key').val().length == 28) {
+                  device = "mobile";
+                  __id = $('#key').val().substr($('#key').val().indexOf('be/') + 3, $('#key').val().length - 1);
+                  //console.log(url.indexOf("be/"));
+                } else {
+                  device = "unknown";
+                  alert(device + " device");
+                  $('#key').val() = "";
+                }
+                window.location = "https://www.y2mate.com/download-youtube/" + __id;
+              }
+            }
+          });
+        }
+
+        //Engine Work Ends here
 
 
 
@@ -482,74 +552,7 @@ x.play();
         $('#temp_info').html(desc + '<br>Minimum:' + temp_min + '<br>Maximum:' + temp_max);
         
 
-        /** statements for adding an keypress event based on selected search engine by user */
-        // start from here
-        var engine = localStorage.getItem('engine');
-
-        if (engine == null || engine == 'Google') {
-          $('#icons').attr('class', 'fab fa-google');
-          $('#key').keypress(function (event) {
-            var keycode = (event.keyCode ? event.keyCode : event.which);
-
-
-            if (keycode == '13') {
-
-              if ($('#key').val() == null || $('#key').val().length == 0) {
-                $('#key').attr('placeholder', 'key Required');
-              } else {
-                window.location = "https://www.google.com/search?q=" + $('#key').val();
-              }
-            }
-          });
-
-
-        } else if (engine == 'stack') {
-          $('#icons').attr('class', 'fab fa-stack-overflow');
-
-          $('#key').keypress(function (event) {
-            var keycode = (event.keyCode ? event.keyCode : event.which);
-            if (keycode == '13') {
-              if ($('#key').val() == null || $('#key').val().length == 0) {
-                $('#key').attr('placeholder', 'key Required');
-              } else {
-                window.location = "https://stackoverflow.com/search?q=" + $('#key').val();
-              }
-            }
-          });
-        } else {
-          $('#icons').attr('class', 'fab fa-youtube');
-
-          $('#key').keypress(function (event) {
-            var keycode = (event.keyCode ? event.keyCode : event.which);
-            var __id = "";
-            if (keycode == '13') {
-              if ($('#key').val() == null || $('#key').val().length == 0) {
-                $('#key').attr('placeholder', 'key Required');
-              } else {
-                if ($('#key').val().length == 43) {
-                  device = "desktop";
-                  __id = $('#key').val().substr($('#key').val().indexOf('v=') + 2, $('#key').val().length - 1);
-
-
-                } else if ($('#key').val().length == 41) {
-                  device = "web_mobile";
-                  __id = $('#key').val().substr($('#key').val().indexOf('v=') + 2, $('#key').val().length - 1);
-                } else if ($('#key').val().length == 28) {
-                  device = "mobile";
-                  __id = $('#key').val().substr($('#key').val().indexOf('be/') + 3, $('#key').val().length - 1);
-                  //console.log(url.indexOf("be/"));
-                } else {
-                  device = "unknown";
-                  alert(device + " device");
-                  $('#key').val() = "";
-                }
-                window.location = "https://www.y2mate.com/download-youtube/" + __id;
-              }
-            }
-          });
-        }
-
-        //Engine Work Ends here
+        
 
 
 
