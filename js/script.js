@@ -27,7 +27,7 @@ if(localStorage.getItem('news_source')==null)
       window.top.location.reload(true);
     });
   }
-	console.log(localstorage.getItem('background');
+	console.log(localstorage.getItem('background'));
 	
 	//Change Background
         switch (localStorage.getItem('background')) {
