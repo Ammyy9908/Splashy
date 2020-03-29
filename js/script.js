@@ -27,7 +27,12 @@ if(localStorage.getItem('news_source')==null)
       window.top.location.reload(true);
     });
   }
-	console.log(localStorage.getItem('background'));
+	//console.log(localStorage.getItem('background'));
+	
+	var myList = ['taj mahal', 'google', 'apple', 'girls', 'mountains', 'mercedes benz', 'rivers', 'water', 'boys', 'dark', 'cars', 'fish', 'delhi', 'new york', 'black', 'cat', 'baby', 'dogs', 'roses',
+          'flowers', 'blossoms', 'usa', 'india', 'bangalore', 'night', 'morning', 'noon', 'evening', 'rainy', 'snow', 'thunderstorm', 'beach', 'flight'
+        ];
+        var randomNo = Math.floor(Math.random() * (0, myList.length - 1));
 	
 	//Change Background
         switch (localStorage.getItem('background')) {
@@ -475,10 +480,7 @@ x.play();
         $('#temp').html(temp);
         $('#city').html(city);
         $('#temp_info').html(desc + '<br>Minimum:' + temp_min + '<br>Maximum:' + temp_max);
-        var myList = ['taj mahal', 'google', 'apple', 'girls', 'mountains', 'mercedes benz', 'rivers', 'water', 'boys', 'dark', 'cars', 'fish', 'delhi', 'new york', 'black', 'cat', 'baby', 'dogs', 'roses',
-          'flowers', 'blossoms', 'usa', 'india', 'bangalore', 'night', 'morning', 'noon', 'evening', 'rainy', 'snow', 'thunderstorm', 'beach', 'flight'
-        ];
-        var randomNo = Math.floor(Math.random() * (0, myList.length - 1));
+        
 
         /** statements for adding an keypress event based on selected search engine by user */
         // start from here
