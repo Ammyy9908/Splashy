@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title></title>
+	<link rel="shortcut icon" href="assets/logo.png" type="image/png">
+	<link href="https://fonts.googleapis.com/css?family=Mansalva&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Anton|Mansalva&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+	<link href="https://fonts.googleapis.com/css?family=Ubuntu&display=swap" rel="stylesheet">
+	<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
+		integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.teal-green.min.css" id="theme" />
+	<script src="58d924559b.js" crossorigin="anonymous"></script>
+
+
+
+	<script defer src="js/material.min.js"></script>
+	<link rel="stylesheet" href="css/jquery-ui.css">
+
+	<link rel="stylesheet" type="text/css" href="css/styles.css">
+</head>
+
+<body>
+	<!--No Internet Connection alert sound-->
+	<audio id="myAudio">
+
+		<source src="assets/No_internet.mp3" type="audio/mpeg">
+		Your browser does not support the audio element.
+	</audio>
+	<div class="main" style="transform-style: preserve-3d;">
+
+		<div id="search">
+			<div class="icon"><i class="material-icons" id="search_icon">search</i></div>
+
+			<input type="search" id="key" autocomplete="off">
+
+			<div class="engine"><i class="" id="icons"></i></div>
+		</div>
+		<div class="forcast">
+
+			<p id="temprature" style="float: right;;margin: 10px;color: #ffffff;font-size: 20px;cursor: pointer;"><span
+					id="temp">Error</span><sup>o</sup><br><span id="city"></span></p>
+		</div>
+
+
+		<div id="bar">
+			<ul id="sidebar">
+				<li id="dev">
+					<a href="#"><img src="https://scontent-bom1-1.xx.fbcdn.net/v/t1.0-9/78607726_860942007684625_5799796198680297472_n.jpg?_nc_cat=106&_nc_ohc=YC4oIcDirq4AX9mNyTA&_nc_ht=scontent-bom1-1.xx&oh=73e468a0fd47df35a0c6b8785f5fc6e9&oe=5EA36E3B" alt="user_image" id="user-image"></a>
+				</li>
+				<li>
+					<a href="https://www.linkedin.com/in/sumit-kumar-220100194/"><i class="fab fa-linkedin"></i></a>
+				</li>
+				<li>
+					<a href="https://github.com/pythonKiller990/Splash"><i class="fab fa-github"></i></a>
+				</li>
+				
+				
+				
+			</ul>
+
+		</div>
+
+		
+
+		<h1 id="time"></h1>
+		<p id="greets">Good,Evening</p>
+		<div id="quotes" style="cursor: pointer;">
+			<p id="quote" class="btn demo-show-toast"
+				data-clipboard-text="Just because you can doesn't mean you should — clipboard.js"></p>
+		</div>
+
+
+
+
+
+
+		<!-- Accent-colored raised button with ripple -->
+		<!--a class="" href="Pixxy-News.html" id="setting"></a>-->
+
+		<a class="" href="#" id="setting">
+			<i class="material-icons" aria-hidden="true" style="text-align: center;position: absolute;top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);font-size: 25px;color: #ffffff;">settings</i>
+		</a>
+
+		<div id="user-info"
+			style="position: absolute;top:95%;left: 4%;transform: (-50%,-50%);cursor: pointer;font-size: 15px;">
+		
+			<i class="fas fa-newspaper fa-lg" style="color: #ffffff;" id="news_icon"></i>
+			
+			
+			
+			
+			</div>
+
+
+			<div id="news">
+
+				<h3 class="main_heading" id="close"><i class="material-icons">close</i></h3>
+				<img src="" alt="cover_come_here" id="thumb" width="200" height="200" style="border-radius: 50%;">
+				<br>
+				<h5 id="title"></h5>
+				<p id="content"></p>
+				<br>
+				
+				<button id="visit" class="mdl-button mdl-js-button mdl-button--fab  mdl-button--colored" style="float: right;"><i class="material-icons" id="visit_icon">arrow_forward</i></button>
+				<button id="sourceId">Source:Google News</button>
+				
+
+		
+
+			</div>
+
+
+			<div id="dev_info">
+
+				<div class="dev_image">
+					<img src="https://scontent-frt3-1.xx.fbcdn.net/v/t1.0-9/78607726_860942007684625_5799796198680297472_n.jpg?_nc_cat=106&_nc_ohc=6dHKWIfAgasAX8FH8jx&_nc_ht=scontent-frt3-1.xx&oh=d602dd37fa99dec88b1da6c5f586b0f5&oe=5EA36E3B" alt="dev_image">
+				</div>
+				<p id="dev_title">Sumit</p><br>
+				<pre id="dev_content">
+					I am the Student of Computer Science, 
+					Currently Studying Information Science.
+					I mostly like,To develop my skills with
+				    daily Habit
+				</pre>
+				<br>
+				<div class="social">
+					<button id="close_btn"><i class="material-icons" style="color: #ffffff;" id="visit_profile">close</i></button>
+					
+				</div>
+
+			</div>
+
+	</div>
+	<div id="demo-toast-example" class="mdl-js-snackbar mdl-snackbar">
+		<div class="mdl-snackbar__text"></div>
+		<button class="mdl-snackbar__action" type="button"></button>
+	</div>
+
+	<div id="backs" class="mdl-js-snackbar mdl-snackbar">
+		<div class="mdl-snackbar__text"></div>
+		<button class="mdl-snackbar__action" type="button"></button>
+	</div>
+	<div class="mdl-tooltip mdl-tooltip--large mdl-tooltip--bottom" data-mdl-for="temprature">
+		<strong id="temp_info">file.zip</strong>
+	</div>
+
+
+
+	<!--setting dialogue start from here-->
+	<dialog class="mdl-dialog ui-widget-content" id="setting-dialog" style="border-radius: 10px;">
+		<p align="center">
+			<h4 class="mdl-dialog__title" id="heading"><i class="material-icons"
+					style="font-size: 35px;;">settings</i>Settings</h4>
+		</p>
+		<div class="mdl-dialog__content">
+			<h5 id="message"></h5>
+			<!--input field for username-->
+			<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+				<input class="mdl-textfield__input" type="text" id="name">
+				<label class="mdl-textfield__label" for="sample3">Enter Your Name</label>
+			</div>
+			<!--field ens here-->
+
+
+			<h6>Background Settings</h6>
+			<select class="backgrounds">
+				<option value="1" id="first">Based on Weather Condition</option>
+				<option value="2" id="second">Dark Wallpapers</option>
+				<option value="3" id="third">Random Wallpapers</option>
+				<option value="4" id="third">Girls Wallpapers</option>
+				<option value="5" id="third">Boys Wallpapers</option>
+				<option value="6" id="third">Animals Wallpapers</option>
+				<option value="7" id="third">Mountains Wallpapers</option>
+				<option value="8" id="third">Beachs Wallpapers</option>
+				<option value="9" id="third">Rain Wallpapers</option>
+				<option value="10" id="third">Roses</option>
+			</select>
+
+			<!--Themes-->
+			<h6>Theme Colors</h6>
+			<select class="themes">
+				<option value="default" id="default">Teal</option>
+				<option value="purple" id="purple">Purple</option>
+				<option value="indigo" id="indigo">Indigo</option>
+				<option value="amber" id="amber">Amber</option>
+			</select>
+
+			<!--Themes Ends Here-->
+
+			<!--Time Format-->
+			<h6>Time Format</h6>
+			<select class="time">
+				<option value="12" id="12">12 Hours</option>
+				<option value="24" id="24">24 Hours</option>
+			</select>
+
+			<!--Time Format  Ends Here-->
+
+
+			<!--Search Engine-->
+			<h6>Search Engine</h6>
+			<select class="eng">
+				<option value="Google" id="s">Google</option>
+				<option value="stack" id="h">Stack Overflow</option>
+				<option value="yt" id="a">YouTube</option>
+			</select>
+
+
+			<!--App Bar-->
+			<h6>Developer Profile</h6>
+			<select class="bar">
+				<option value="Show" id="s">Show</option>
+				<option value="Hide" id="h">Hide</option>
+				
+			</select>
+
+			<!--News Source Selection-->
+			<h6>Choose News Provider</h6>
+			<select class="news_selection">
+				<option value="0">Abc News</option>
+				<option value="1">Google News India</option>
+				<option value="2">BBC News</option>
+				<option value="3">BBC Sport</option>
+				<option value="4">Buzzfeed</option>
+				<option value="5">CBC News</option>
+				<option value="6">CNN</option>
+				<option value="7">ESPN</option>
+				<option value="8">Fox News</option>
+				<option value="9">Google News</option>
+				<option value="10">Hacker News</option>
+				<option value="11">National Geographic</option>
+				<option value="12">Techcrunch</option>
+				<option value="13">Techradar</option>
+				<option value="14">Times of India</option>
+				<option value="15">Time</option>
+				<option value="16">USA Today</option>
+				<option value="17">Wired</option>
+				
+			</select>
+
+
+
+		</div>
+
+
+		<div class="mdl-dialog__actions">
+
+			<button class="mdl-button mdl-js-button mdl-button--fab mdl-button--mini-fab mdl-button--colored close" id="closeSetting"><i
+					class="material-icons">clear</i></button>
+
+			<button class="mdl-button mdl-js-button mdl-button--fab mdl-button--mini-fab mdl-button--colored"
+				id="save"><i class="material-icons">save</i></button>
+			<!--button to clear Data-->
+			<button  id="delete"
+				class="mdl-button mdl-js-button mdl-button--fab mdl-button--mini-fab mdl-button--colored" id="bin"><i
+					class="material-icons" aria-hidden="true" >delete</i></button>
+
+		</div>
+	</dialog>
+
+	<!--Setting dialogue ends here-->
+
+
+	<!--News Dialog start from here-->
+
+	
+
+	<!--News Dialog End here-->
+
+	<script src="js/mousetrap.min.js"></script>
+	<script src="js/modal.js">
+
+	</script>
+
+	<!--<script src="js/news_modal.js"></script>-->
+	
+	<script src="js/jquery-3.4.1.min.js"></script>
+	<script src="js/jquery-ui.js"></script>
+	<script src="js/news.js"></script>
+	<script type="text/javascript" src="js/clipboard.min.js"></script>
+	<script type="text/javascript" src="js/copy.js"></script>
+	<!--<script type="text/javascript" src="js/battery.js"></script>-->
+	<script type="text/javascript" src="js/script.js"></script>
+	<script src="keybinds.js"></script>
+
+</body>
+
+</html>
