@@ -76,7 +76,7 @@ if(localStorage.getItem('news_source')==null)
             $('.backgrounds option[value=10]').attr('selected', 'selected');
             break;
           default:
-            getNewBackground(desc);
+            getNewBackground('clouds');
             $('.backgrounds option[value=1]').attr('selected', 'selected');
             break;
 
