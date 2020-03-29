@@ -453,7 +453,7 @@ x.play();
 
   /*Weather Funtion start from here*/
   function getWeather(city) {
-    var url = "http://api.openweathermap.org/data/2.5/weather?q=" + city' + "&APPID=16020d8d307b65395a579b8cdb9b33dd&units=metric";
+    var url = "http://api.openweathermap.org/data/2.5/weather?q=" + city + "&APPID=16020d8d307b65395a579b8cdb9b33dd&units=metric";
 
 
     $.ajax({
