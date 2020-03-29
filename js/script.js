@@ -561,7 +561,7 @@ x.play();
       error: function (e) {
         console.log(e)
 	var statuscode = e.status; //or whatever
-	$('#temp').html('Error While getting Weather!');
+	$('#temp').html('');
         
         if (statuscode == 400) {
           console.log('There is an error city not found!');
