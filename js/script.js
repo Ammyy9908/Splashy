@@ -89,7 +89,7 @@ if(localStorage.getItem('news_source')==null)
   /* Fallback if internet is slow or 
   image not loaded
   */
-  $('.main').css('background-image', 'url(https://source.unsplash.com/1920x1366/?beach)');
+  //$('.main').css('background-image', 'url(https://source.unsplash.com/1920x1366/?beach)');
 
 
 
